@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+        
+    <LinearLayout android:id="@+id/footer2"
+	                  android:layout_width="fill_parent"
+	                  android:layout_height="wrap_content"
+	                  android:orientation="horizontal"
+	                  android:gravity="bottom">
+	 
+	 		<Button android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:id="@+id/hello_button"
+	                android:layout_gravity="center_vertical"
+	                android:text="hello message" />
+	 		
+	 		<Button android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:id="@+id/connect_button"
+	                android:layout_gravity="center_vertical"
+	                android:text="connect to server" />
+	 		
+	        <Button android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:id="@+id/close_button"
+	                android:layout_gravity="center_vertical"
+	                android:text="unconnect" />
+	        
+	        <Button android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:id="@+id/data2_button"
+	                android:layout_gravity="center_vertical"
+	                android:text="shot" />
+	</LinearLayout>
+    
+    <LinearLayout android:id="@+id/controllers"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:gravity="top">
+	        
+	    <LinearLayout android:id="@+id/joystick"
+	                  android:layout_width="wrap_content"
+	                  android:layout_height="wrap_content"
+	                  android:orientation="horizontal"
+	                  android:gravity="left" />
+	    
+	    <RelativeLayout android:id="@+id/arrows"
+	                  android:layout_width="500dp"
+	                  android:layout_height="400dp"
+	                  android:layout_marginTop="-100dp"
+	                  android:gravity="right">
+		    
+		    <Button
+		        android:id="@+id/up"
+		        android:layout_width="150dp"
+		        android:layout_height="150dp"
+		        android:layout_alignParentTop="true"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="80dp"
+		        android:layout_marginLeft="250dp"
+		        android:text="up" />
+		
+		    <Button
+		        android:id="@+id/down"
+		        android:layout_width="150dp"
+		        android:layout_height="150dp"
+		        android:layout_alignLeft="@+id/up"
+		        android:layout_below="@+id/up"
+		        android:text="down" />
+		
+		    <Button
+		        android:id="@+id/left"
+		        android:layout_width="150dp"
+		        android:layout_height="150dp"
+		        android:layout_alignBaseline="@+id/down"
+		        android:layout_alignBottom="@+id/down"
+		        android:layout_toLeftOf="@+id/down"
+		        android:text="left" />
+		
+		    <Button
+		        android:id="@+id/right"
+		        android:layout_width="150dp"
+		        android:layout_height="150dp"
+		        android:layout_alignBaseline="@+id/down"
+		        android:layout_alignBottom="@+id/down"
+		        android:layout_toRightOf="@+id/down"
+		        android:text="right" />
+		
+	    </RelativeLayout>
+    </LinearLayout>
+	    
+    <ListView android:id="@+id/list"
+              android:layout_width="fill_parent"
+              android:layout_height="0dip"
+              android:layout_weight="1"
+              android:transcriptMode="alwaysScroll"
+              android:cacheColorHint="#00000000"
+              android:listSelector="@android:color/transparent"/>
+
+</LinearLayout>
